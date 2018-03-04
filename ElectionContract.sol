@@ -36,6 +36,9 @@ contract Election {
 
   event ElectionResult(bytes32 name, uint voteCount);
 
+  function getElectionName() constant returns(string) {
+    return name;
+  }
 
   // Constructor
   function Election(string _name, uint durationMin, bytes32[] candidateLst) {
@@ -65,7 +68,7 @@ contract Election {
   }
 
 
-  function authorize_voters(address[] _voters) {
+  function authorizeVoters(address[] _voters) {
     // Ensure only the owner can authorize users
     require(msg.sender == owner);
 
@@ -79,7 +82,7 @@ contract Election {
     }
   }
   
-  function election_result() {
+  function electionResult() {
     // Ensure only owner can see result
     require(msg.sender == owner);
     // Ensure election is actually over
