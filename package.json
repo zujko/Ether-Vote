@@ -4,7 +4,6 @@
   "description": "Voting app",
   "main": "node.js",
   "dependencies": {
-    "deasync": "^0.1.12",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "fsevents": "^1.1.3",
