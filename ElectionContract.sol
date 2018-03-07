@@ -93,4 +93,12 @@ contract Election {
     }
   }
 
+  function getCandidatesCount() public constant returns(uint) {
+    return candidates.length;
+  }
+
+  function getUser(uint index) public constant returns(bytes32, uint) {
+    return (candidates[index].name, candidates[index].voteCount);
+  }
+
 }

@@ -2,11 +2,10 @@
   "name": "ether-vote",
   "version": "1.0.0",
   "description": "Voting app",
-  "main": "node.js",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "fsevents": "^1.1.3",
     "ganache-cli": "^6.0.3",
     "solc": "^0.4.20",
     "web3": "^0.20.2"

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  node:
+    build: .
+    ports:
+      - "8080:8080"
+
+  blockchain:
+    build: .
+    command: /Ether-Vote/node_modules/.bin/ganache-cli
+    expose:
+      - "8545"

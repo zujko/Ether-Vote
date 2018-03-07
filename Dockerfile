@@ -1,13 +1,15 @@
-FROM node:carbon
+FROM node:carbon-alpine
 
-WORKDIR /usr/src/ethervote
+WORKDIR /Ether-Vote
 
-COPY package*.json ./
+RUN apk update && apk add git
 
-RUN npm install
+COPY package*.json /Ether-Vote/
 
-COPY . .
+RUN npm install --no-optional
+
+ADD . /Ether-Vote
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
